@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Learning Interface</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <header>
+        <h1>Active Learning Web Interface</h1>
+    </header>
+    <main>
+        <!-- Etiquetado -->
+        <section id="labeling">
+            <div id="current-image">
+                <img id="digit-to-label" src="" alt="Digit to label">
+            </div>
+            <div id="label-controls">
+                <input type="text" id="label-input" placeholder="Enter label (0-9)">
+                <button id="submit-button">OK</button>
+            </div>
+        </section>
+
+        <!-- Gráfica -->
+        <section id="performance">
+            <h2>Performance Chart</h2>
+            <canvas id="performance-chart"></canvas>
+        </section>
+
+        <!-- Historial -->
+        <section id="history">
+            <h2>Last 5 Labeled Images</h2>
+            <div id="history-container"></div>
+        </section>
+    </main>
+    <script src="/static/script.js"></script>
+</body>
+</html>

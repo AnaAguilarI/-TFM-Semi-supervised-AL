@@ -46,6 +46,9 @@ def label_digit():
         # Update the pool
         X_pool, y_pool = np.delete(X_pool, current_query_idx, axis=0), np.delete(y_pool, current_query_idx, axis=0)
         
+        # Clear the entry box
+        entry.delete(0, tk.END)  # Clear the text box
+
         # Update accuracy scores
         accuracy_scores.append(learner.score(X_test, y_test))
         update_plot()
