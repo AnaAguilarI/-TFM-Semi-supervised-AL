@@ -22,7 +22,7 @@ X_pool, y_pool = np.delete(X_train, initial_idx, axis=0), np.delete(y_train, ini
 # Initialize the learner
 learner = ActiveLearner(
     estimator=RandomForestClassifier(),
-    query_strategy=uncertainty_sampling,
+    query_strategy=uncertainty_sampling, # opciones: margin_sampling, entropy_sampling, uncertainty_sampling
     X_training=X_initial, y_training=y_initial
 )
 
